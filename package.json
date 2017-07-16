@@ -1,0 +1,25 @@
+{
+  "name": "tentpole-website",
+  "description": "The Tentpole Website",
+  "version": "1.0.0",
+  "private": true,
+  "contributors": [
+    {
+      "name": "Rob Ferguson",
+      "email": "rob.ferguson@robferguson.org",
+      "url": "http://robferguson.org"
+    }
+  ],
+  "dependencies": {
+    "deploy-to-gh-pages": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.2.0",
+    "gulp-util": "^3.0.8"
+  },
+  "scripts": {
+    "deploy": "deploy-to-gh-pages --update web_deploy",
+    "deploy-branch": "node ./scripts/deploy-branch.js"
+  }
+}

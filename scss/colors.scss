@@ -1,0 +1,42 @@
+/* Colors */
+@include generateColors("white", $default-white-color, $default-button-color);
+@include generateColors("black", $default-button-color);
+
+/* Colors by Google Meterial Design (C) */
+@include generateColors("red", #F44336);
+@include generateColors("pink", #E91E63);
+@include generateColors("purple", #9C27B0);
+@include generateColors("deepPurple", #673AB7);
+@include generateColors("indigo", #3F51B5);
+@include generateColors("blue", #2196F3);
+@include generateColors("cyan", #00BCD4);
+@include generateColors("teal", #009688);
+@include generateColors("green", #4CAF50);
+@include generateColors("lightGreen", #8BC34A);
+@include generateColors("lime", #CDDC39);
+@include generateColors("yellow", #FFEB3B, $default-button-color);
+@include generateColors("amber", #FFC107);
+@include generateColors("orange", #FF9800);
+@include generateColors("deepOrange", #FF5722);
+@include generateColors("brown", #795548);
+@include generateColors("gray", #9E9E9E);
+@include generateColors("grey", #9E9E9E);
+@include generateColors("blueGray", #607D8B);
+@include generateColors("blueGrey", #607D8B);
+
+
+/* Social Colors */
+@include generateColors("facebook", #3b5998);
+@include generateColors("twitter", #55acee);
+@include generateColors("googlePlus", #DD4330);
+@include generateColors("stumbleupon", #eb4924);
+@include generateColors("linkedin", #0077b5);
+@include generateColors("pinterest", #cc2127);
+@include generateColors("instagram", #4D9AD8);
+@include generateColors("tumblr", #34455D);
+@include generateColors("dribbble", #ea4c89);
+@include generateColors("yt", #cd201f);
+@include generateColors("delicious", #3399ff);
+@include generateColors("digg", #000000);
+@include generateColors("vimeo", #fff, #1ab7ea);
+@include generateColors("xing", #026466);

@@ -1,0 +1,85 @@
+//Mixins Library
+
+//input placeholder (framework.scss)
+@mixin inputPlaceholder($color, $font-weight, $opacity) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-weight: $font-weight;
+		opacity: $opacity;
+	}
+	&:-moz-placeholder{
+		color: $color;
+		font-weight: $font-weight;
+		opacity: $opacity;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		font-weight: $font-weight;
+		opacity: $opacity;
+	}
+	&:-ms-input-placeholder{
+		color: $color;
+		font-weight: $font-weight;
+		opacity: $opacity;
+	}
+}
+
+// Color Mixin (colors.scss)
+@mixin generateColors($name, $color, $pair: #fff){
+	.#{$name} {
+			background: $color !important;
+
+			@if $pair == #fff {
+				 color:$pair !important;
+
+				 svg {
+						fill:$pair !important;
+				 }
+			} @else {
+				 color:$pair!important;
+
+				 svg {
+						fill:$pair !important;
+				 }
+			}
+
+			@if $color == #fff {
+				.slide.whiteSlide & {
+					box-shadow: 0 0 0 1px rgba(41, 41, 41, 0.2) inset, inset 0 -100px 0 rgba(41, 41, 41, 0);
+				}
+			}
+	}
+	 
+	//for stroke buttons
+	.text-#{$name} {
+		color: $color !important;
+		
+		&.button svg {
+			 fill: $color !important;
+		}
+	}
+
+	.stroke.button.#{$name} {
+		color: $color !important;
+		border-color: $color !important;
+
+		svg {
+			fill: $color !important;
+		}
+
+	}
+}
+
+// Insert Media
+@mixin media($width, $minOrMax) {
+	@if $minOrMax == "max" {
+		$width: $width - 1px;
+	}
+
+  @media (#{$minOrMax}-width: $width) { @content; }
+}
+
+// Insert Media Range
+@mixin mediaRange($width-1, $width-2) {
+  @media (max-width: $width-1) and (min-width: $width-2) { @content; }
+}

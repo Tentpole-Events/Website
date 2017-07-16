@@ -1,0 +1,70 @@
+// FONTS
+$header-font: ('Source Sans Pro', sans-serif);
+$header-baseline: 0.1445;
+
+$body-font: ('Source Sans Pro', sans-serif);
+$body-baseline: 0.1445;
+
+$gh: 1rem;
+
+//FONT WEIGHTS
+$ultraLight:	200;
+$light:			300;
+$normal:		400;
+$semiBold:		500;
+$bold:			600;
+$ultraBold: 	900;
+
+//COLORS 
+//more here: colors.scss
+$color-medium: #303030;
+$default-button-color: #202020;
+$default-dark-color: #303030;
+$default-white-color: #fff;
+
+//WIDTH
+$max-width: 1114px;
+$tablet: 1024px;
+$phablet: 768px;
+$phone: 436px;
+
+//BORDER RADIUS
+$default-border-radius: 3px;
+$rounded-border-radius: 6px;
+
+//ANIMATION
+$horizontal-distance: 100px;
+$vertical-distance: 50px;
+$start-delay: 10; 					//ms
+
+//default
+$default-duration: 800;			//ms
+$default-delay-step: 150; 	//ms
+
+//fast
+$fast-duration: 700;				//ms
+$fast-delay-step: 100; 			//ms
+
+//slow
+$slow-duration: 1000;				//ms
+$slow-delay-step: 200; 			//ms
+
+//values
+$blur-size: 10px;
+$small-scale: 0.8;
+$large-scale: 1.2;
+
+
+/* Additional Fonts: 
+.raleway {
+  font-family:Raleway, sans-serif !important;
+}
+.sourceSans {
+  font-family:"Source Sans Pro", sans-serif !important;
+}
+.playfair {
+  font-family:"Playfair Display", serif !important;
+}
+.georgia {
+  font-family:Georgia, serif !important;
+} */
