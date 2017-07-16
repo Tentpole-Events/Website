@@ -18,7 +18,9 @@
 		<link href="css/slides.css" rel="stylesheet" type="text/css">
 
 		<!-- Custom Styles -->
+        <!--
         <link href="css/custom.css" rel="stylesheet" type="text/css">
+        -->
 
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -27,7 +29,9 @@
 
 		<!-- Custom Scripts -->
         <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!--
         <script src="js/custom.js" type="text/javascript" name="custom-scripts"></script>
+        -->
 
         <!-- favicons -->
         <link rel="icon" type="image/png" href="favicon.png">
@@ -333,13 +337,53 @@
   <div class="background" style="background-image:url(assets/img/img-39.jpg)"></div>
 </section>
 
-<!-- Slide 1 (#20) -->
+<!-- Slide 6 (#20) -->
 <section class="slide fade kenBurns">
   <div class="content">
     <div class="container">
       <div class="wrap">
 
-        <div id="demo" class="fix-10-12">
+        <div class="fix-10-12">
+
+          <h1 class="huge ae-1">the ring system</h1>
+
+          <svg viewBox="0 0 400 100">
+            <defs>
+              <rect id="anim-rect"
+                    x="-25" y="-25"
+                    width="50" height="50"
+                    fill="#29e" >
+              </rect>
+            </defs>
+
+            <use xlink:href="#anim-rect" transform="translate(100 50)">
+              <animateTransform
+                      attributeName="transform" type="rotate"
+                      values="0 0 0; 360 0 0"
+                      additive="sum"
+                      dur="6s"
+                      repeatCount="indefinite" /> </use>
+
+            <use xlink:href="#anim-rect" transform="translate(200 50)">
+              <animateTransform
+                      attributeName="transform" type="scale"
+                      values="0.5; 1.5; 0.5"
+                      additive="sum"
+                      dur="3s"
+                      repeatCount="indefinite" /> </use>
+
+            <use xlink:href="#anim-rect" transform="translate(300 50)">
+              <animateTransform
+                      attributeName="transform" type="translate"
+                      values="-12.5 -12.5;
+                     12.5 -12.5;
+                     12.5  12.5;
+                    -12.5  12.5;
+                    -12.5 -12.5"
+                      additive="sum"
+                      dur="3s"
+                      repeatCount="indefinite" /> </use>
+          </svg>
 
         </div>
 
