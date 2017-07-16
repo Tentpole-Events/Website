@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "deploy-to-gh-pages": "^1.1.0",
-    "shelljs": "^0.7.0"
+    "shelljs": "^0.7.8"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
