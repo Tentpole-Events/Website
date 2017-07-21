@@ -20,8 +20,7 @@
     "gulp-util": "^3.0.8"
   },
   "scripts": {
-    "test": "return 0",
-    "deploy": "deploy-to-gh-pages --update web_deploy",
-    "deploy-branch": "node ./scripts/deploy-branch.js"
+    "test": "node ./scripts/test.js",
+    "deploy": "deploy-to-gh-pages --update web_deploy"
   }
 }
