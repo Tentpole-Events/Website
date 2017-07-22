@@ -1,6 +1,6 @@
 function render() {
 
-  console.log("render.js - start");
+  // console.log("render.js - start");
 
   var spec = {
 
@@ -166,6 +166,6 @@ function render() {
     renderer: 'svg'
   }).initialize('#treemap').hover().run();
 
-  console.log("render.js - end");
+  // console.log("render.js - end");
 }
 
