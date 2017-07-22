@@ -18,26 +18,24 @@
   <link href="css/slides.css" rel="stylesheet" type="text/css">
 
   <!-- Custom Styles -->
-  <link href="css/draw.css" rel="stylesheet" type="text/css">
+  <link href="https://vega.github.io/vega/assets/syntax.css" rel="stylesheet" type="text/css">
+  <link href="https://vega.github.io/vega/assets/main.css" rel="stylesheet" type="text/css">
+
+  <link href="css/render.css" rel="stylesheet" type="text/css">
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="js/plugins.js" type="text/javascript" name="plugins"></script>
-  <script src="js/slides.js" type="text/javascript" name="slides"></script>
+  <script src="js/plugins.js" type="text/javascript"></script>
+  <script src="js/slides.js" type="text/javascript"></script>
 
   <!-- Custom Scripts -->
-  <!--
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  -->
-  <script src="js/d3.js"></script>
+  <script src="https://vega.github.io/vega/vega.js" type="text/javascript"></script>
 
-  <script src="js/station-connectivity.js" type="text/javascript"></script>
+  <script src="js/render.js" type="text/javascript"></script>
 
   <script type="text/javascript">
     function onLoad() {
-      // draw("assets/data/flare.json");
-      // d3.json("assets/data/service_status.json", draw);
-      d3.json('assets/data/stations_graph.json', draw);
+      render();
     }
     window.onload = onLoad;
   </script>
@@ -266,6 +264,58 @@
   <div class="background" style="background-image:url(assets/img/img-84.jpg)"></div>
 </section>
 
+<!-- Slide 5 (#55) -->
+<section class="slide fade kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <h1 class="ae-1">Say Hello</h1>
+        <div class="ae-2"><p>Feel free to ask us anything.</p></div>
+        <div class="fix-5-12 margin-top-6">
+          <div class="pad shadow selected ae-3">
+            <form action="ajax-email.php" id="contact-form" method="post" class="wide center" data-ajax-form="true">
+              <div class="label ae-4 cropTop"><label class="cropTop opacity-5" for="name55">your name</label></div>
+              <input class="stroke ae-5 wide" id="name55" type="name" name="name" placeholder="name" required/>
+              <div class="label ae-6"><label class="opacity-5" for="email55">your email address</label></div>
+              <input class="stroke ae-7 wide" id="email55" type="email" name="email" placeholder="email" required/>
+              <div class="label ae-8"><label class="opacity-5" for="message55">your message</label></div>
+              <textarea class="left ae-9" id="message55" type="text" name="message" placeholder="message" required></textarea>
+              <input class="button wide pink ae-10 margin-top-2 cropBottom" type="submit" name="submit" value="send message" data-success-text="done!" data-success-class="green"/>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/img-39.jpg)"></div>
+</section>
+
+<!-- Slide X (#20) -->
+<section class="slide fade kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        <div class="fix-10-12">
+
+          <h1 class="huge ae-1">the ring system</h1>
+
+          <div class="example">
+
+            <div class="embed">
+              <div id="treemap" class="view"></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/img-3-3.jpg)"></div>
+</section>
+
 <!-- Slide 4 (#57) -->
 <section class="slide kenBurns">
   <div class="content">
@@ -316,107 +366,6 @@
   <!--
   <div class="background" style="background:#39BC98"></div>
   -->
-</section>
-
-<!-- Slide 5 (#55) -->
-<section class="slide fade kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-
-        <h1 class="ae-1">Say Hello</h1>
-        <div class="ae-2"><p>Feel free to ask us anything.</p></div>
-        <div class="fix-5-12 margin-top-6">
-          <div class="pad shadow selected ae-3">
-            <form action="ajax-email.php" id="contact-form" method="post" class="wide center" data-ajax-form="true">
-              <div class="label ae-4 cropTop"><label class="cropTop opacity-5" for="name55">your name</label></div>
-              <input class="stroke ae-5 wide" id="name55" type="name" name="name" placeholder="name" required/>
-              <div class="label ae-6"><label class="opacity-5" for="email55">your email address</label></div>
-              <input class="stroke ae-7 wide" id="email55" type="email" name="email" placeholder="email" required/>
-              <div class="label ae-8"><label class="opacity-5" for="message55">your message</label></div>
-              <textarea class="left ae-9" id="message55" type="text" name="message" placeholder="message" required></textarea>
-              <input class="button wide pink ae-10 margin-top-2 cropBottom" type="submit" name="submit" value="send message" data-success-text="done!" data-success-class="green"/>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/img-39.jpg)"></div>
-</section>
-
-<!-- Slide X (#20) -->
-<section class="slide fade kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-        <div class="fix-10-12">
-
-          <div id="demo" width="1300" height="1300">
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/img-39.jpg)"></div>
-</section>
-
-<!-- Slide X (#20) -->
-<section class="slide fade kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-
-        <div class="fix-10-12">
-
-          <h1 class="huge ae-1">the ring system</h1>
-
-          <svg viewBox="0 0 400 100">
-            <defs>
-              <rect id="anim-rect"
-                    x="-25" y="-25"
-                    width="50" height="50"
-                    fill="#29e" >
-              </rect>
-            </defs>
-
-            <use xlink:href="#anim-rect" transform="translate(100 50)">
-              <animateTransform
-                      attributeName="transform" type="rotate"
-                      values="0 0 0; 360 0 0"
-                      additive="sum"
-                      dur="6s"
-                      repeatCount="indefinite" /> </use>
-
-            <use xlink:href="#anim-rect" transform="translate(200 50)">
-              <animateTransform
-                      attributeName="transform" type="scale"
-                      values="0.5; 1.5; 0.5"
-                      additive="sum"
-                      dur="3s"
-                      repeatCount="indefinite" /> </use>
-
-            <use xlink:href="#anim-rect" transform="translate(300 50)">
-              <animateTransform
-                      attributeName="transform" type="translate"
-                      values="-12.5 -12.5;
-                     12.5 -12.5;
-                     12.5  12.5;
-                    -12.5  12.5;
-                    -12.5 -12.5"
-                      additive="sum"
-                      dur="3s"
-                      repeatCount="indefinite" /> </use>
-          </svg>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background:#FFFFFF"></div>
 </section>
 
 <!-- Panel Bottom #22 -->
