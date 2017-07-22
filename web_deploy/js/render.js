@@ -31,7 +31,7 @@ function render() {
     "data": [
       {
         "name": "tree",
-        "url": "data/flare.json",
+        "url": "assets/data/ring-system.json",
         "transform": [
           {
             "type": "stratify",
@@ -159,7 +159,8 @@ function render() {
   }
 
   var view = new vega.View(vega.parse(spec), {
-    loader: vega.loader({baseURL: 'https://vega.github.io/vega/'}),
+    // loader: vega.loader({baseURL: 'https://tentpole-events.github.io/website/'}),
+    loader: vega.loader({baseURL: 'http://localhost:8000/'}),
     logLevel: vega.Warn,
     renderer: 'svg'
   }).initialize('#treemap').hover().run();

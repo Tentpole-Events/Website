@@ -33,7 +33,7 @@
 *.log
 
 # Dir for deploy
-# web_deploy
+temp
 
 # Logs
 logs
