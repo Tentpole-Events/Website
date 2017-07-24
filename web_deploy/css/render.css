@@ -1,0 +1,26 @@
+h1 {
+  color: white;
+}
+
+h1.treemap-title,
+  .h1.treemap-title {
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.2em 0;
+}
+
+@media (max-width: 767px) {
+  h1.treemap-title,
+  .h1.treemap-title {
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 319px) {
+  h1.treemap-title,
+  .h1.treemap-title {
+    font-size: 50px;
+  }
+}
