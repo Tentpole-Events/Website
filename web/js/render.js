@@ -32,7 +32,7 @@ function render() {
         }
       },
       {
-        "name": "aspectRatio", "value": 1.6,
+        "name": "aspectRatio", "value": 1.0,
         "bind": {"input": "range", "min": 0.2, "max": 5, "step": 0.1}
       }
     ],
