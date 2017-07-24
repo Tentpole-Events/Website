@@ -2,11 +2,20 @@ function render() {
 
   // console.log("render.js - start");
 
+  var width = $("#treemap").parent().width();
+  // var height = $("#treemap").parent().height();
+  var height = width / 2;
+
+  // console.log("width: " + width + " height: " + height);
+
+  $("#treemap").css("width", width).css("height", height);
+  $("#treemap svg").css("width", width).css("height", height);
+
   var spec = {
 
     "$schema": "https://vega.github.io/schema/vega/v3.0.json",
-    "width": 960,
-    "height": 500,
+    "width": width,
+    "height": height,
     "padding": 2.5,
     "autosize": "none",
 

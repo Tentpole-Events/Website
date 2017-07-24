@@ -41,6 +41,24 @@
       render();
     }
     window.onload = onLoad;
+
+    $(window).resize(function() {
+      if(this.resizeTO) clearTimeout(this.resizeTO);
+      this.resizeTO = setTimeout(function() {
+        $(this).trigger('resizeEnd');
+      }, 500);
+    });
+
+    $(window).bind('resizeEnd', function() {
+      var width = $("#treemap").parent().width();
+      // var height = $("#treemap").parent().height();
+      var height = width / 2;
+
+      // console.log("width: " + width + " height: " + height);
+
+      $("#treemap").css("width", width).css("height", height);
+      $("#treemap svg").css("width", width).css("height", height);
+    });
   </script>
 
   <!-- favicons -->
