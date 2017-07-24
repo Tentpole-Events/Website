@@ -1,15 +1,13 @@
+'use strict';
+
 function render() {
 
-  // console.log("render.js - start");
+  // console.log("render() - start");
 
-  var width = $("#treemap").parent().width();
-  // var height = $("#treemap").parent().height();
-  var height = width / 2;
+  var width = $("#id-treemap").parent().width();
+  var height = $("#id-navigation").height() / 2;
 
   // console.log("width: " + width + " height: " + height);
-
-  $("#treemap").css("width", width).css("height", height);
-  $("#treemap svg").css("width", width).css("height", height);
 
   var spec = {
 
@@ -154,27 +152,45 @@ function render() {
     ]
   };
 
-  function image(view, type) {
-    return function(event) {
-      event.preventDefault();
-      view.toImageURL(type).then(function(url) {
-        var link = document.createElement('a');
-        link.setAttribute('href', url);
-        link.setAttribute('target', '_blank');
-        link.setAttribute('download', 'treemap.' + type);
-        link.dispatchEvent(new MouseEvent('click'));
-      }).catch(function(error) { console.error(error); });
-    };
-  }
-
-  var view = new vega.View(vega.parse(spec), {
+  window.view = new vega.View(vega.parse(spec), {
     // loader: vega.loader({baseURL: 'https://tentpole-events.github.io/website/'}),
     // loader: vega.loader({baseURL: 'http://localhost:8000/'}),
     loader: vega.loader({baseURL: 'https://tentpole-events.github.io/website/'}),
     logLevel: vega.Warn,
     renderer: 'svg'
-  }).initialize('#treemap').hover().run();
+  }).initialize('#id-treemap').hover().run();
 
-  // console.log("render.js - end");
+  console.log("render() - end");
 }
 
+function image(view, type) {
+  return function(event) {
+    event.preventDefault();
+    view.toImageURL(type).then(function(url) {
+      var link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('download', 'treemap.' + type);
+      link.dispatchEvent(new MouseEvent('click'));
+    }).catch(function(error) { console.error(error); });
+  };
+}
+
+function update() {
+
+  // console.log("update() - start");
+
+  var width = $("#id-treemap").parent().width();
+  var height = $("#id-navigation").height() / 2;
+
+  // console.log("width: " + width + " height: " + height);
+
+  // window.view.width(width).height(height).renderer("svg").update();
+  // window.view.update();
+
+  $("#id-treemap svg").css("width", width).css("height", height);
+  window.view.width(width).height(height);
+
+  // console.log("view width: " + window.view.width() + " window height: " + window.view.height());
+  // console.log("update() - end");
+}

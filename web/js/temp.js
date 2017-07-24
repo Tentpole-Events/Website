@@ -1,15 +1,19 @@
 function render() {
 
-  // console.log("render.js - start");
+  // console.log("render()- start");
 
-  var width = $("#treemap").parent().width();
-  // var height = $("#treemap").parent().height();
-  var height = width / 2;
+  // var titleHeight = $("#id-treemap-title").height();
+  // console.log("titleHeight: " + titleHeight);
+  // var height = width / 2 - titleHeight;
+  // var height = $("#treemap").parent().height() - titleHeight;
 
-  // console.log("width: " + width + " height: " + height);
+  var width = $("#id-treemap").parent().width();
+  var height = $("#id-navigation").height() / 2;
 
-  $("#treemap").css("width", width).css("height", height);
-  $("#treemap svg").css("width", width).css("height", height);
+  console.log("width: " + width + " height: " + height);
+
+  // $("#id-treemap").css("width", width).css("height", height);
+  // $("#id-treemap svg").css("width", width).css("height", height);
 
   var spec = {
 
@@ -173,8 +177,25 @@ function render() {
     loader: vega.loader({baseURL: 'https://tentpole-events.github.io/website/'}),
     logLevel: vega.Warn,
     renderer: 'svg'
-  }).initialize('#treemap').hover().run();
+  }).initialize('#id-treemap').hover().run();
 
-  // console.log("render.js - end");
+  // console.log("render() - end");
 }
+
+function update() {
+  console.log("update() - start");
+
+  var width = $("#id-treemap").parent().width();
+  var height = $("#id-navigation").height() / 2;
+
+  console.log("width: " + width + " height: " + height);
+
+  // $("#id-treemap").css("width", width).css("height", height);
+  // $("#id-treemap svg").css("width", width).css("height", height);
+
+  view.width(width).height(height).renderer("svg").update();
+
+  console.log("update() - end");
+}
+
 

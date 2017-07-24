@@ -30,6 +30,7 @@
 
   <!-- Custom Scripts -->
   <!--
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-rc3/vega.min.js"></script>
   <script src="https://vega.github.io/vega/vega.js" type="text/javascript"></script>
   -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-rc3/vega.min.js"></script>
@@ -50,14 +51,7 @@
     });
 
     $(window).bind('resizeEnd', function() {
-      var width = $("#treemap").parent().width();
-      // var height = $("#treemap").parent().height();
-      var height = width / 2;
-
-      // console.log("width: " + width + " height: " + height);
-
-      $("#treemap").css("width", width).css("height", height);
-      $("#treemap svg").css("width", width).css("height", height);
+      update();
     });
   </script>
 
@@ -145,7 +139,7 @@
 
 <!-- Navigation -->
 <nav class="side square">
-  <div class="navigation">
+  <div id="id-navigation" class="navigation">
     <ul></ul>
   </div>
 </nav>
@@ -325,11 +319,9 @@
       <div class="wrap">
 
         <div class="fix-10-12">
-          <h1 class="huge ae-1 text-black">the ring</h1>
-          <div class="example">
-            <div class="embed">
-              <div id="treemap" class="view"></div>
-            </div>
+          <h1 id="id-treemap-title" class="treemap-title ae-1 text-black">the ring</h1>
+          <div class="ae-2">
+              <div id="id-treemap" class="view"></div>
           </div>
         </div>
 
@@ -339,7 +331,7 @@
 </section>
 
 <!-- Slide 6 (#57) -->
-<section class="slide kenBurns">
+<section class="slide fade kenBurns">
   <div class="content">
     <div class="container">
       <div class="wrap">
