@@ -160,7 +160,7 @@ function render() {
     renderer: 'svg'
   }).initialize('#id-treemap').hover().run();
 
-  console.log("render() - end");
+  // console.log("render() - end");
 }
 
 function image(view, type) {
