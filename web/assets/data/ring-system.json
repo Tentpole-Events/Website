@@ -7,15 +7,13 @@
   {
     "id": 2,
     "name": "Arrangement",
-    "parent": 1,
-    "size": 120
+    "parent": 1
   },
 
   {
     "id": 3,
     "name": "Classification",
-    "parent": 1,
-    "size": 130
+    "parent": 1
   },
     {
       "id": 31,
@@ -24,13 +22,13 @@
       "size": 200
     },
       {
-        "id": 312,
+        "id": 311,
         "name": "Vendor",
         "parent": 31,
         "size": 300
       },
       {
-        "id": 311,
+        "id": 312,
         "name": "Venue",
         "parent": 31,
         "size": 300
@@ -57,15 +55,13 @@
   {
     "id": 4,
     "name": "Condition",
-    "parent": 1,
-    "size": 140
+    "parent": 1
   },
 
   {
     "id": 5,
     "name": "Event",
-    "parent": 1,
-    "size": 150
+    "parent": 1
   },
     {
       "id": 51,
@@ -89,8 +85,7 @@
   {
     "id": 6,
     "name": "Location",
-    "parent": 1,
-    "size": 160
+    "parent": 1
   },
     {
       "id": 61,
@@ -114,8 +109,7 @@
   {
     "id": 7,
     "name": "Party",
-    "parent": 1,
-    "size": 170
+    "parent": 1
   },
     {
       "id": 71,
@@ -181,8 +175,7 @@
   {
     "id": 8,
     "name": "Products and Services",
-    "parent": 1,
-    "size": 180
+    "parent": 1
   },
     {
       "id": 81,
@@ -224,8 +217,7 @@
   {
     "id": 9,
     "name": "Resource Item",
-    "parent": 1,
-    "size": 190
+    "parent": 1
   },
     {
       "id": 91,
@@ -269,5 +261,4 @@
         "parent": 91,
         "size": 300
       }
-
 ]

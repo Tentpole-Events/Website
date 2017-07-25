@@ -1,0 +1,264 @@
+[
+  {
+    "id": 1,
+    "name": "Business Concept"
+  },
+
+  {
+    "id": 2,
+    "name": "Arrangement",
+    "parent": 1
+  },
+
+  {
+    "id": 3,
+    "name": "Classification",
+    "parent": 1
+  },
+  {
+    "id": 31,
+    "name": "Role Type",
+    "parent": 3,
+    "size": 200
+  },
+  {
+    "id": 311,
+    "name": "Vendor",
+    "parent": 31,
+    "size": 300
+  },
+  {
+    "id": 312,
+    "name": "Venue",
+    "parent": 31,
+    "size": 300
+  },
+  {
+    "id": 32,
+    "name": "Assessment",
+    "parent": 3,
+    "size": 200
+  },
+  {
+    "id": 321,
+    "name": "Credit Rating",
+    "parent": 32,
+    "size": 300
+  },
+  {
+    "id": 322,
+    "name": "Market Value",
+    "parent": 32,
+    "size": 300
+  },
+
+  {
+    "id": 4,
+    "name": "Condition",
+    "parent": 1
+  },
+
+  {
+    "id": 5,
+    "name": "Event",
+    "parent": 1
+  },
+  {
+    "id": 51,
+    "name": "Event type",
+    "parent": 5,
+    "size": 200
+  },
+  {
+    "id": 511,
+    "name": "Business Activity",
+    "parent": 51,
+    "size": 300
+  },
+  {
+    "id": 512,
+    "name": "Communication",
+    "parent": 51,
+    "size": 300
+  },
+
+  {
+    "id": 6,
+    "name": "Location",
+    "parent": 1
+  },
+  {
+    "id": 61,
+    "name": "Location Type",
+    "parent": 6,
+    "size": 200
+  },
+  {
+    "id": 611,
+    "name": "Address",
+    "parent": 6,
+    "size": 300
+  },
+  {
+    "id": 612,
+    "name": "Electronic Address",
+    "parent": 6,
+    "size": 300
+  },
+
+  {
+    "id": 7,
+    "name": "Party",
+    "parent": 1
+  },
+  {
+    "id": 71,
+    "name": "Party Type",
+    "parent": 7,
+    "size": 200
+  },
+  {
+    "id": 711,
+    "name": "Individual",
+    "parent": 71,
+    "size": 300
+  },
+  {
+    "id": 7111,
+    "name": "Gender",
+    "parent": 711,
+    "size": 400
+  },
+  {
+    "id": 71111,
+    "name": "Male",
+    "parent": 7111,
+    "size": 500
+  },
+  {
+    "id": 71112,
+    "name": "Female",
+    "parent": 7111,
+    "size": 500
+  },
+  {
+    "id": 712,
+    "name": "Organization",
+    "parent": 71,
+    "size": 300
+  },
+  {
+    "id": 713,
+    "name": "Organization Unit",
+    "parent": 71,
+    "size": 300
+  },
+  {
+    "id": 72,
+    "name": "Legal Entity Type",
+    "parent": 7,
+    "size": 200
+  },
+  {
+    "id": 721,
+    "name": "Incorporated Entity",
+    "parent": 72,
+    "size": 300
+  },
+  {
+    "id": 722,
+    "name": "Unincorporated Entity",
+    "parent": 72,
+    "size": 300
+  },
+
+  {
+    "id": 8,
+    "name": "Products and Services",
+    "parent": 1
+  },
+  {
+    "id": 81,
+    "name": "Product Type",
+    "parent": 8,
+    "size": 200
+  },
+  {
+    "id": 811,
+    "name": "Financial Service",
+    "parent": 81,
+    "size": 300
+  },
+  {
+    "id": 812,
+    "name": "Financial Market Instrument",
+    "parent": 81,
+    "size": 300
+  },
+  {
+    "id": 813,
+    "name": "Information Service",
+    "parent": 81,
+    "size": 300
+  },
+  {
+    "id": 814,
+    "name": "Product Access Service",
+    "parent": 81,
+    "size": 300
+  },
+  {
+    "id": 815,
+    "name": "Support Service",
+    "parent": 81,
+    "size": 300
+  },
+
+  {
+    "id": 9,
+    "name": "Resource Item",
+    "parent": 1
+  },
+  {
+    "id": 91,
+    "name": "Resource Item Type",
+    "parent": 9,
+    "size": 200
+  },
+  {
+    "id": 911,
+    "name": "Chattel",
+    "parent": 91,
+    "size": 300
+  },
+  {
+    "id": 9111,
+    "name": "Chattel Type",
+    "parent": 911,
+    "size": 400
+  },
+  {
+    "id": 91111,
+    "name": "Plant and Equipment",
+    "parent": 9111,
+    "size": 500
+  },
+  {
+    "id": 91111,
+    "name": "Furniture and Fittings",
+    "parent": 9111,
+    "size": 500
+  },
+  {
+    "id": 912,
+    "name": "Documentation Item",
+    "parent": 91,
+    "size": 300
+  },
+  {
+    "id": 912,
+    "name": "Intellectual Property",
+    "parent": 91,
+    "size": 300
+  }
+]
