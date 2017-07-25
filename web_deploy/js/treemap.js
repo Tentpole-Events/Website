@@ -155,7 +155,7 @@ function render() {
   window.view = new vega.View(vega.parse(spec), {
     // loader: vega.loader({baseURL: 'https://tentpole-events.github.io/website/'}),
     // loader: vega.loader({baseURL: 'http://localhost:8000/'}),
-    loader: vega.loader({baseURL: 'http://localhost:8000/'}),
+    loader: vega.loader({baseURL: 'https://tentpole-events.github.io/website/'}),
     logLevel: vega.Warn,
     renderer: 'svg'
   }).initialize('#id-treemap').hover().run();
