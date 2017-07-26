@@ -1,0 +1,49 @@
+/* Embedded Vega examples. */
+.view > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.view .marks {
+    margin-right: 1em;
+}
+.view .vega-bindings {
+    font-size: 14px;
+    line-height: 20px;
+}
+.view .vega-bind-name {
+    display: inline-block;
+    width: 105px;
+}
+.view .vega-bind input[type="range"] {
+    padding: 0;
+    width: 100px;
+}
+.view .vega-bind select {
+    max-width: 200px;
+}
+.view .vega-bind label {
+    margin-left: 4px;
+}
+.view .vega-bind-radio label {
+    margin-left: 0;
+    margin-right: 4px;
+}
+.embed > a {
+    visibility: hidden;
+    font-size: 14px;
+    margin-right: 0.5em;
+}
+.embed:hover > a {
+    visibility: visible;
+}
+.example .embed > a {
+    display: none;
+}
+.example .view > * {
+    display: inline-block;
+    vertical-align: top;
+}
+.example .view .vega-bindings {
+    margin-top: 1em;
+}
+

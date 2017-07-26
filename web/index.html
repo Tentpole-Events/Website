@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <!-- Page Title -->
@@ -14,19 +14,21 @@
   <!-- Base Path to Scripts -->
   <base href="./">
 
+  <!-- Vega Styles -->
+  <!--
+  <link href="https://vega.github.io/vega/assets/syntax.css" rel="stylesheet" type="text/css">
+  <link href="https://vega.github.io/vega/assets/main.css" rel="stylesheet" type="text/css">
+
+  <link href="css/vega/syntax.css" rel="stylesheet" type="text/css">
+  <link href="css/vega/main.css" rel="stylesheet" type="text/css">
+  -->
+  <link href="css/vega/vega.css" rel="stylesheet" type="text/css">
+
   <!-- Styles -->
   <link href="css/slides.css" rel="stylesheet" type="text/css">
 
   <!-- Custom Styles -->
-  <!--
-  <link href="https://vega.github.io/vega/assets/syntax.css" rel="stylesheet" type="text/css">
-  <link href="https://vega.github.io/vega/assets/main.css" rel="stylesheet" type="text/css">
-  -->
-  <link href="css/vega/syntax.css" rel="stylesheet" type="text/css">
-  <link href="css/vega/main.css" rel="stylesheet" type="text/css">
-
   <link href="css/custom.css" rel="stylesheet" type="text/css">
-  <link href="css/render.css" rel="stylesheet" type="text/css">
 
   <!-- Scripts -->
   <!--
@@ -44,6 +46,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-rc3/vega.min.js"></script>
 
   <script src="js/treemap.js" type="text/javascript"></script>
+
+  <!-- Script for mobile submenu -->
+  <script type="text/javascript">
+    $(function(){
+      $('.submenu-dropdown').click(function(){
+        $('.submenu-elements').slideToggle();
+      });
+    })
+  </script>
 
   <script type="text/javascript">
     function onLoad() {
@@ -137,23 +148,21 @@
   </div>
 </nav>
 
-<!-- Panel Top #17 -->
+<!-- Panel Top #04 -->
 <nav class="panel top forceMobileView">
   <div class="sections desktop">
-
     <div class="left">
       <div class="textLogo selectable sourceSans">tent<span class="light">pole</span></div>
     </div>
-
     <div class="center">
-      <ul class="menu sourceSans">
+      <ul class="menu">
         <li><a href="#home">Home</a></li>
-        <li><a target="_blank" href="https://ghost.org/">Blog</a></li>
-        <li class="dropdownTrigger" data-dropdown-id="dropdown-menu"><a href="#">Community <svg class="dropdown-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#drop-down"></use></svg></a></li>
+        <li><a target="_blank" href="https://medium.com/">Blog</a></li>
+        <li class="dropdownTrigger" data-dropdown-id="dropdown-menu">
+          <a href="#">Community <svg class="dropdown-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#drop-down"></use></svg></a></li>
         <li><a href="#sign-in">Sign In</a></li>
       </ul>
     </div>
-
     <div class="right">
       <ul class="menu">
         <li><a href="http://facebook.com/tentpoleevents" target="_blank"><svg class="panelIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
@@ -161,21 +170,23 @@
         <li><a href="http://twitter.com/tentpoleevents" target="_blank"><svg class="panelIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
       </ul>
     </div>
-
   </div>
   <div class="sections compact hidden">
-    <div class="left"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
-    <!--
-    <div class="right"><span class="button actionButton dropdownTrigger" data-dropdown-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
-    -->
+    <div class="left">
+      <a href="#home" class="logo">
+        <div class="textLogo selectable sourceSans">tent<span class="light">pole</span></div>
+      </a>
+    </div>
+    <div class="right"><span class="button actionButton sidebarTrigger hideForMobile" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
   </div>
 </nav>
 
-<!-- Research Menu Dropdown -->
+<!-- Community Menu Dropdown -->
 <div class="dropdown top left center customDropdown" data-dropdown-id="dropdown-menu">
   <ul>
-    <li><a target="_blank" href="https://tentpole.slack.com/">Slack</a></li>
-    <li class="toSlide-1">Discourse</li>
+    <!-- <li><a target="_blank" href="https://tentpole.slack.com/">Slack</a></li> -->
+    <li class="toSlide-3">Slack</li>
+    <li class="toSlide-3">Discourse</li>
   </ul>
 </div>
 
@@ -183,14 +194,16 @@
 <nav class="sidebar" data-sidebar-id="1">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
   <div class="content">
-    <a href="#home" class="logo"><div class="textLogo selectable sourceSans">tent<span class="light">pole</span></div></a>
+    <a href="#home" class="logo">
+      <div class="textLogo selectable sourceSans">tent<span class="light">pole</span></div>
+    </a>
     <ul class="mainMenu large light">
       <li><a href="#home">Home</a></li>
-      <li><a target="_blank" href="https://ghost.org/">Blog</a></li>
+      <li><a target="_blank" href="https://medium.com/">Blog</a></li>
       <li>
         <a class="submenu-dropdown" href="#">Community <i class="material-icons">arrow_drop_down</i></a>
         <ul class="mainMenu small submenu-elements" style="display: none">
-          <li><a target="_blank" href="https://tentpole.slack.com/">Slack</a></li>
+          <li><a href="#">Slack</a></li>
           <li><a href="#">Discourse</a></li>
         </ul>
       </li>
@@ -236,9 +249,6 @@
   <div class="background" style="background-image:url(assets/img/img-24.jpg)"></div>
 </section>
 
-
-
-
 <!-- Slide 3 (#20) -->
 <section class="slide fade kenBurns">
   <div class="content">
@@ -266,7 +276,7 @@
       <div class="wrap">
 
         <div class="fix-10-12">
-          <h1 id="id-treemap-title" class="treemap-title ae-1 text-black">the ring system</h1>
+          <h1 class="ae-1 text-black">the ring system</h1>
           <div class="ae-2">
               <div id="id-treemap" class="view"></div>
           </div>

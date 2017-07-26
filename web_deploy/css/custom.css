@@ -76,6 +76,7 @@ a.box-74 {
 .panel .sections .menu.small li:focus {
     background: rgba(0, 0, 0, 0.15);
 }
+
 .dropdown.customDropdown { padding:10px 0;}
 .dropdown.customDropdown li:not(.link),
 .dropdown.customDropdown li.link a { font-size: 18px; padding: 8px 10px 8px 20px; cursor: pointer; display: block; text-align: left; }
