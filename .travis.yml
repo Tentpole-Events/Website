@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "node"
 deploy:
-  - skip_cleanup: false
+  - skip_cleanup: true
     provider: script
     script: npm run deploy
     on:
