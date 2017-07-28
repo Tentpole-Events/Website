@@ -88,6 +88,11 @@ a.box-74 {
     margin-left: 4px;
 }
 
+.slides.whiteSlide .panel svg {
+    fill: #303030 !important;
+    stroke: #303030 !important;
+}
+
 /* scale Home Slide Bg properly on mobile */
 .mobile .slides .slide[name="home"] .background {
     background-position: 70%;
